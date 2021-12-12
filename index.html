@@ -11,25 +11,23 @@
   <body>
     <header>
       <img src="./nasa.png">
+      <h1 class="apod">Astronomy Picture of the Day<br>(APOD)</h1>
     </header>
 
-    <main>
+    <main class="principal">
       <div class="navegar">
-          <h1 class="apod">Astronomy Picture of the Day<br>(APOD)</h1>
-          <h2 class="subtitulo"><i>Vem conferir a imagem do dia!</i></h2>
-          <p class="escolha">Escolha uma data a partir de janeiro de 2015
+          <h2 class="subtitulo">Escolha um dia e aprecie a imagem!</h2>
           <input type="date" name="date" id="data">
           <button type="button" id="botao" value="buscar">confirmar</button>
           </p>
       </div>
 
       <div class="apresentacao">
-      <div class="descricao">
-        <h3 id="titulo"></h3>
+        <h3 id="titulo">
+        A NASA junto com a Universidade Tecnológica do Michigan disponibiliza todos os dias uma imagem(ou video) de nosso maravilhoso e fascinante universo.
+        </h3>
+        <img src="/earth.jpg" alt="imagem do universo" id="imagem">
         <p id="texto"></p>
-      </div>
-      <div class="picture">
-        <img src=" " alt="imagem do dia" id="imagem">
       </div>
     </main>
 
