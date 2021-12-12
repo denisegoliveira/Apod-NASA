@@ -1,22 +1,21 @@
-let data = document.getElementById('data');
-let botao = document.getElementById('botao');
+const key = 'V5geNqQAIA1lVuA79kajO5Xu32I86xPbmjDyjdEq';
 
-var dados = new FormData();
+$('#botao').click(
+    function() {
+        var data = $('#data').val()
+            $.ajax({
+            url: `https://api.nasa.gov/planetary/apod?api_key=${key}&date=${data}`,
+            type:'GET',
+            success: function(result){
 
-dados.append('data');
+            $('#titulo').text(result.title)
+            $('#imagem').attr('src', result.url)
+            $('#texto').text(result.explanation)
 
-botao.addEventListener("click", function(resultado){
-    resultado.preventDefault();
+            }
+        })
+    }
+)
 
-    $.ajax({
-        url: 'https://api.nasa.gov/planetary/apod',
-        type:'GET',
-        data: dados,
-        processData: false;
-        contentType: false,
-        success: function(response) {
-        },
 
-    });
-    console.log(response);
-})
+

@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./apod.css">
+    <link rel="stylesheet" href="./reset.css">
     <title>NASA-Apod</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Astronomy Picture of the Day<br>(APOD)</h1>
+      <img src="./nasa.png">
     </header>
 
     <main>
-        <p>
-            Você sabia que a cada dia podemos ver uma nova imagem de nosso maravilhoso e incrivel universo?
-        </p>
-        <p>
-            A NASA junto com a Universidade Tecnológica do Mishigan nos proporciona essa exeperiência fascinante.
-        </p>
-        <h2>
-            Venha conferir!
-        </h2>
+      <div class="navegar">
+          <h1 class="apod">Astronomy Picture of the Day<br>(APOD)</h1>
+          <h2 class="subtitulo"><i>Vem conferir a imagem do dia!</i></h2>
+          <p class="escolha">Escolha uma data a partir de janeiro de 2015
+          <input type="date" name="date" id="data">
+          <button type="button" id="botao" value="buscar">confirmar</button>
+          </p>
+      </div>
 
-    <form>
-        <label for="data">Escolha uma data
-            <input type="date" id="data">
-            <button id="botao">confirmar</button>
-        </label>
-        
-    </form>
+      <div class="apresentacao">
+      <div class="descricao">
+        <h3 id="titulo"></h3>
+        <p id="texto"></p>
+      </div>
+      <div class="picture">
+        <img src=" " alt="imagem do dia" id="imagem">
+      </div>
     </main>
 
+    <footer class="copy">&copy; Copyright - Denise G. Oliveira</footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./apod.js"></script>
-</body>
+  </body>
 </html>
