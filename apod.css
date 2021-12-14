@@ -82,6 +82,7 @@ main {
     font-size: 18px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: justify;
+    margin-bottom: 20px;
 }
 
 #titulo {
